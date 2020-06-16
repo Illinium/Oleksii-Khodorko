@@ -30,6 +30,11 @@
     color: #f4f4f4;
     background-color: $dark-color;
   }
+  &-red {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: red;
+  }
 }
 
 button[class^="btn-"]:hover,
@@ -112,7 +117,7 @@ input[class^="btn-"]:hover {
 
 .bottom-line {
   height: 2px;
-  width: 3rem;
+  width: 4rem;
   background: $main-color;
   display: block;
   margin: 0 auto 1rem auto;
