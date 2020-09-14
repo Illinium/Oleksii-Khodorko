@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 @import "config";
 @import "utilities";
 @import "item_grid";
@@ -9,7 +10,8 @@
 }
 
 body {
-  font-family: "Fredoka One", cursive;
+  // font-family: "Fredoka One", cursive;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   background: #fff;
   font-weight: 400;
@@ -28,6 +30,7 @@ h2,
 h3,
 h4 {
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 img {
@@ -79,9 +82,33 @@ img {
     .about {
       padding: 0 1rem;
     }
+    .about {
+      position: relative;
+      animation: mymove2 1s ease-in;
+    }
+    @keyframes mymove2 {
+      from {
+        opacity: 0;
+        right: -200px;
+      }
+      to {
+        right: 0px;
+      }
+    }
     .photo {
       img {
+        position: relative;
         box-shadow: grey 4px 4px 4px;
+        animation: mymove 1s ease-in;
+      }
+      @keyframes mymove {
+        from {
+          opacity: 0;
+          left: -200px;
+        }
+        to {
+          left: 0px;
+        }
       }
     }
   }
@@ -139,6 +166,16 @@ img {
         color: #fff;
         text-align: center;
         background: $main-color;
+      }
+    }
+    #skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      div {
+        padding: 0 60px;
+      }
+      li {
+        list-style: circle;
       }
     }
   }
@@ -292,6 +329,11 @@ img {
         border-top: 3px solid $main-color;
       }
     }
+    &-b {
+      #skills div {
+        padding: 0 20px;
+      }
+    }
     &-c {
       .about-logos {
         grid-template-columns: 1fr 1fr;
@@ -314,6 +356,11 @@ img {
       .contact-info {
         grid-template-columns: 1fr;
         grid-row-gap: 1rem;
+      }
+    }
+    &-c {
+      h1 {
+        font-size: 2rem;
       }
     }
   }
